@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.hubmaintenance" name="- BDTV Maintenance" version="130001.6.5" provider-name="BDTV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.repository" name="- BDTV Maintenance">
+    <dir>
+        <info compressed="false">https://bitbucket.org/allfreetv/tv/raw/master/addons.xml</info>
+        <checksum>https://bitbucket.org/allfreetv/tv/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://bitbucket.org/allfreetv/tv/raw/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">http://allfreetv.square7.ch/repo/addons.xml</info>
+        <checksum>http://allfreetv.square7.ch/repo/addons.xml.md5</checksum>
+        <datadir zip="true">http://allfreetv.square7.ch/repo/</datadir>
+    </dir>
+        <info compressed="false">http://allfree.tv/bdtv/addons.xml</info>
+        <checksum>http://allfree.tv/bdtv/addons.xml.md5</checksum>
+        <datadir zip="true">http://allfree.tv/bdtv/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">BDTV Mainenance</summary>
+    <description lang="en">BDTV Maintenance is your onestop tool for all fixes</description>
+    <platform>all</platform>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+</addon>
+
 <addon id="plugin.video.youtube" name="YouTube" version="6.2.2a" provider-name="BDTV">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
